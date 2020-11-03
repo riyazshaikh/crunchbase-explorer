@@ -1,5 +1,5 @@
-# crunchbase-explorer
-Explore Crunchbase database using Crossfilter visualization
+# Crunchbase Explorer
+Explore Crunchbase company data from 2013 using Crossfilter visualization
 
 [Live Demo](https://crunchbase-explorer.web.app)
 
