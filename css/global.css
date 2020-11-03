@@ -1,0 +1,16 @@
+h1, h2, h3 {
+    margin-top: 1em;
+}
+
+tr.info {
+    background-color: #d9edf7;
+    text-transform: capitalize;
+}
+
+svg {
+    overflow: visible;
+}
+
+a.reset {
+    cursor: pointer;
+}
