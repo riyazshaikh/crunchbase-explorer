@@ -14,3 +14,53 @@ svg {
 a.reset {
     cursor: pointer;
 }
+
+h1 {
+	text-align: center;
+}
+
+body:not(.loaded):before, body:not(.loaded):after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;	
+}
+
+body:not(.loaded):before {
+	background-image: url(https://www.starburstdata.com/wp-content/uploads/2020/07/crunchbase-logo.png);
+	background-color: #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 150px;
+}
+body:not(.loaded):after {
+	background-color: #fff;
+	-webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 50%, #000 100%);
+	-webkit-mask-size: 300px;
+	animation: shimmer 3s linear 0s infinite;	
+}
+.container {
+	transition: opacity 0.5s;
+	opacity: 0;
+	position: relative;
+}
+body.loaded .container {
+	opacity: 1;
+}
+#stage-chart {
+	position: absolute;
+	top: 400px;
+	right: 0;
+	width: 200px;
+}
+
+@keyframes shimmer {
+	from {
+		-webkit-mask-position-x: 0;
+	} to {
+		-webkit-mask-position-x: 300px;
+	}
+}
