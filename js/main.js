@@ -152,7 +152,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     .columns([
                         {
                             label: 'Name',
-                            format: d => `<a href="https://www.crunchbase.com/${d.permalink}" target=_blank>${d.name}</a>`
+                            format: d => `<a href="https://www.crunchbase.com/organization/${d.permalink}" target=_blank>${d.name}</a>`
                         },
                         'sectors',
                         'headquarters',
