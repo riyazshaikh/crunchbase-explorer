@@ -13,25 +13,34 @@
 </head>
 <body>
     <div class="container">
-        <h2>Crunchbase Explorer</h2>
-        <small>
-            Data source: 
-            <a href="data/crunchbase-companies.csv" target="_blank">Crunchbase Companies 2013</a>
-        </small>
+        <h1>Crunchbase Explorer</h1>
         <div id="us-chart">
             <h3>Funding By State (hover to see details)</h3>
             <a class="reset" style="display: none;">Reset</a>
             <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
         </div>
+        <div id="stage-chart">
+            <div>
+                <a class="reset" style="display: none;">Reset</a>
+                <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
+            </div>
+        </div>            
+        <div id="date-chart">
+            <h3>Founded Year</h3>
+            <a class="reset" style="display: none;">Reset</a>
+            <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
+        </div>
         <div id="industry-chart">
-            <h3>Industries</h3> (y: number of companies, x: total funding, radius: median funding)
+            <h3>Sectors</h3> (y: number of companies, x: total funding, radius: median funding)
             <br/>
             <a class="reset" style="display: none;">Reset</a>
             <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
         </div>
         <div id="company-table">
             <h3>Company Details</h3>
-            <a class="reset" style="display: none;">Reset</a>
+            <div id="record-count">
+                <span class="filter-count"></span> selected out of <span class="total-count"></span> records.
+            </div>        
             <div class="scrollable" style="overflow: auto;">
                 <table class="table table-hover dc-data-table">
                 </table>
