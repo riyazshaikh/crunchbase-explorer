@@ -1,22 +1,62 @@
-h1, h2, h3 {
-    margin-top: 1em;
+body {
+	margin: 2em 4em;	
+}
+.container {
+	transition: opacity 0.5s;
+	opacity: 0;
+}
+.loaded .container {
+	opacity: 1;
 }
 
-tr.info {
-    background-color: #d9edf7;
-    text-transform: capitalize;
+.container {
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.chart {
+	max-height: 250px;
+	overflow: auto;
+}
+
+.filter {
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 5em;
+}
+
+.container .dc-chart g.row text {
+	fill: inherit;
+	text-transform: capitalize;
+}
+
+#prev, #next {
+	float: right;
+}
+
+.table td {
+	white-space: pre-line;
+	text-transform: capitalize;
+	max-width: 20em;
 }
 
 svg {
     overflow: visible;
+    display: block;
 }
 
 a.reset {
     cursor: pointer;
 }
 
-h1 {
+h1, h3 {
 	text-align: center;
+}
+h3 {
+	margin-top: 1em;
 }
 
 body:not(.loaded):before, body:not(.loaded):after {
@@ -41,20 +81,6 @@ body:not(.loaded):after {
 	-webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0.4) 50%, #000 100%);
 	-webkit-mask-size: 300px;
 	animation: shimmer 3s linear 0s infinite;	
-}
-.container {
-	transition: opacity 0.5s;
-	opacity: 0;
-	position: relative;
-}
-body.loaded .container {
-	opacity: 1;
-}
-#stage-chart {
-	position: absolute;
-	top: 400px;
-	right: 0;
-	width: 200px;
 }
 
 @keyframes shimmer {
