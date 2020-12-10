@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     // Initialize charts
     const dateChart = new dc.BarChart("#date-chart .chart");
-    const stageChart = new dc.PieChart("#stage-chart .chart");
+    const stageChart = new dc.RowChart("#stage-chart .chart");
     const stateChart = new dc.RowChart("#state-chart .chart");
     const sectorChart = new dc.RowChart("#sector-chart .chart");
     const investorChart = new dc.RowChart("#investor-chart .chart");
@@ -67,11 +67,10 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Plot row charts
     stageChart
             .width(WIDTH/5)
-            .height(220)
+            .height(stages.group().all().length * 20)
+            .margins({top: 20, right: 20, bottom: 20, left: 20})
             .dimension(stages)
             .group(stages.group())
-            .slicesCap(3)
-            .innerRadius(10)
 
     stateChart
             .width(WIDTH/5)
